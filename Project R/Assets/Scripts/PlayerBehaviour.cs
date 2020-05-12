@@ -63,15 +63,8 @@ public class PlayerBehaviour : MonoBehaviour
             StartCoroutine(FlashHit());
             if (collision.gameObject.GetComponent<Note>().index == sb.arrayNote.Length-1)
             {
-                Debug.Log("You won");
-                //Win effect
-                //Win music
-                winMenu.SetActive(true);
-                sb.enabled = false;
-                AudioManager.instance.StopEverything();
+
             }
-
-
             collision.gameObject.SetActive(false);
             sm.UpdateScore(1);
             pc.Regulate();

@@ -28,14 +28,14 @@ public class PitchController : MonoBehaviour
         {
             alpf.cutoffFrequency -= 4320f;
             collision.gameObject.SetActive(false);
-            //if (alpf.cutoffFrequency <= 400f)
-            //{
-            //    Debug.Log("You lose");
-            //    FindObjectOfType<SpawnerBehaviour>().gameObject.SetActive(false);
-            //    FindObjectOfType<PlayerBehaviour>().GetComponent<PlayerBehaviour>().enabled = false;
-            //    gameOverMenu.SetActive(true);
-            //    AudioManager.instance.StopEverything();
-            //}
+            if (alpf.cutoffFrequency <= 400f)
+            {
+                Debug.Log("You lose");
+                FindObjectOfType<SpawnerBehaviour>().gameObject.SetActive(false);
+                FindObjectOfType<PlayerBehaviour>().GetComponent<PlayerBehaviour>().enabled = false;
+                gameOverMenu.SetActive(true);
+                AudioManager.instance.StopEverything();
+            }
         }
     }
     public void Regulate()
