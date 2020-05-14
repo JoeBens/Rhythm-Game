@@ -17,6 +17,8 @@ public class SessionManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI tip;
 
+    public GameObject holdPanel;
+
     void Start()
     {
         sb = FindObjectOfType<SpawnerBehaviour>();
@@ -37,47 +39,41 @@ public class SessionManager : MonoBehaviour
         int length = sb.arrayNote.Length;
         sb.enabled = false;
         FindObjectOfType<PlayerBehaviour>().GetComponent<PlayerBehaviour>().enabled = false;
+        scoreText.SetText(score + " / " + length);
+
+        holdPanel.SetActive(false);
 
         if (win == false)
         {
             Debug.Log("You lose");
 
+            notice.SetText("Hirohito Araki is disappointed");
+            tip.SetText("This..this must be the work of an enemy stand!");
+
             return;
         }
 
-        if (score <= length * 0.25f)
+        if (score <= length * 0.5f)
         {
             Debug.Log("You lose");
-            notice.SetText("");
-            scoreText.SetText("");
-            tip.SetText("");
+            notice.SetText("You missed a lot, Giorno is not amused");
+            tip.SetText("Come on, you can do better!");
            
-        }
-        else if(score <= length * 0.5f)
-        {
-            Debug.Log("You won");
-            notice.SetText("");
-            scoreText.SetText("");
-            tip.SetText("");
-
         }
         else if (score <= length * 0.75f)
         {
-            notice.SetText("");
-            scoreText.SetText("");
-            tip.SetText("");
+            notice.SetText("ORA ORA ORA ORA ORA ORA ORA");
+            tip.SetText("YES! YES! YES! YES! YES!");
         }
         else if (score <= length * 0.99f)
         {
-            notice.SetText("");
-            scoreText.SetText("");
-            tip.SetText("");
+            notice.SetText("Greato Daze!");
+            tip.SetText("Jotaro Kujo wants to send you on a mission");
         }
         else if (score == length )
         {
-            notice.SetText("");
-            scoreText.SetText("");
-            tip.SetText("");
+            notice.SetText("Niiiiiice!");
+            tip.SetText("You should work at the Speedwagon Company");
         }
     }
 }

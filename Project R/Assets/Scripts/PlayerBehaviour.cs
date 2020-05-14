@@ -34,7 +34,6 @@ public class PlayerBehaviour : MonoBehaviour
         sm = FindObjectOfType<ScoreManager>();
         pc = FindObjectOfType<PitchController>();
         originalColor = sr.color;
-        Time.timeScale = 0.5f;
         
     }
 
@@ -61,9 +60,18 @@ public class PlayerBehaviour : MonoBehaviour
             sb.hitNote = true;
             //Destroy(collision.gameObject);
             StartCoroutine(FlashHit());
+            //instantiate effect
+            GameObject obj = ObjectPooler.SharedInstance.GetPooledObject(1);
+            obj.transform.position = collision.gameObject.transform.position;
+            var rotationVector = obj.transform.rotation.eulerAngles;
+            rotationVector.z = 45;
+            obj.transform.rotation = Quaternion.Euler(rotationVector);
+            
+            obj.SetActive(true);
+            //if the song ended
             if (collision.gameObject.GetComponent<Note>().index == sb.arrayNote.Length-1)
             {
-
+                FindObjectOfType<SessionManager>().Endgame(true);
             }
             collision.gameObject.SetActive(false);
             sm.UpdateScore(1);
