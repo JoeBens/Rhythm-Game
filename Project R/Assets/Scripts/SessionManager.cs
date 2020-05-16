@@ -67,12 +67,12 @@ public class SessionManager : MonoBehaviour
         }
         else if (score <= length * 0.99f)
         {
-            notice.SetText("Greato Daze!");
+            notice.SetText("Gureato Daze!");
             tip.SetText("Jotaro Kujo wants to send you on a mission");
         }
         else if (score == length )
         {
-            notice.SetText("Niiiiiice!");
+            notice.SetText("Niiiiiice! Perfect!");
             tip.SetText("You should work at the Speedwagon Company");
         }
     }
