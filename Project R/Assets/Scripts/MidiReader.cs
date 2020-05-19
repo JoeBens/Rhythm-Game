@@ -53,7 +53,7 @@ public class MidiReader : MonoBehaviour
         }
 
         string[] arrayNoteV2 = notes.ToArray();
-        System.IO.File.WriteAllLines("Assets/Resources/DragonBallGTNotes.txt", arrayNoteV2);
+        System.IO.File.WriteAllLines("Assets/Resources/GurengeNotes.txt", arrayNoteV2);
     }
 
     public void WriteBeats()
@@ -63,7 +63,7 @@ public class MidiReader : MonoBehaviour
         {
             notes.Add(eventsBeatsArr[i].ToString());
         }
-        System.IO.File.WriteAllLines("Assets/Resources/DragonBallGTBeats.txt", notes);
+        System.IO.File.WriteAllLines("Assets/Resources/GurengeBeats.txt", notes);
     }
 
     //public decimal[] Read()
@@ -126,7 +126,7 @@ public class MidiReader : MonoBehaviour
     private List<decimal> CalculateMidiRealTime()
     {
         var strictMode = false;
-        var mf = new MidiFile("Assets/Audios/Midi Files/dandan.mid", strictMode);
+        var mf = new MidiFile("Assets/Audios/Midi Files/Gurenge.mid", strictMode);
         mf.Events.MidiFileType = 0;
 
         // Have just one collection for both non-note-off and tempo change events
