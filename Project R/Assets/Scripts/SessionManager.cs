@@ -19,6 +19,7 @@ public class SessionManager : MonoBehaviour
 
     public GameObject holdPanel;
 
+
     void Start()
     {
         sb = FindObjectOfType<SpawnerBehaviour>();
@@ -47,33 +48,30 @@ public class SessionManager : MonoBehaviour
         {
             Debug.Log("You lose");
 
-            notice.SetText("Hirohito Araki is disappointed");
-            tip.SetText("This..this must be the work of an enemy stand!");
+            notice.SetText("Very Bad!");
+            tip.SetText("Focus next time!");
 
             return;
         }
-
         if (score <= length * 0.5f)
         {
-            Debug.Log("You lose");
-            notice.SetText("You missed a lot, Giorno is not amused");
-            tip.SetText("Come on, you can do better!");
-           
+            notice.SetText("Well that was bad!");
+            tip.SetText("You can do much better");
         }
         else if (score <= length * 0.75f)
         {
-            notice.SetText("ORA ORA ORA ORA ORA ORA ORA");
-            tip.SetText("YES! YES! YES! YES! YES!");
+            notice.SetText("Hey that was good!");
+            tip.SetText("..But you can do better");
         }
-        else if (score <= length * 0.99f)
+        else if (score <= length * 0.999999999999999999f)
         {
-            notice.SetText("Gureato Daze!");
-            tip.SetText("Jotaro Kujo wants to send you on a mission");
+            notice.SetText("Almost perfect! Great job!");
+            tip.SetText("You're very talented!");
         }
         else if (score == length )
         {
-            notice.SetText("Niiiiiice! Perfect!");
-            tip.SetText("You should work at the Speedwagon Company");
+            notice.SetText("Perfect.");
+            tip.SetText("You inspire perfection.");
         }
     }
 }

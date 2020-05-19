@@ -11,8 +11,8 @@ public class PitchController : MonoBehaviour
 
     public GameObject gameOverMenu;
 
-    private float[] cutOffValues = {22000f, 5000f, 700f, 600f, 450f, 300f};
-    private float[] alphaValues = { 0f, 0.2f, 0.4f, 0.7f, 0.85f, 1f};
+    private float[] cutOffValues = {22000f, 5000f, 700f, 600f, 450f, 300f, 100f};
+    private float[] alphaValues = { 0f, 0.2f, 0.4f, 0.7f, 0.85f, 0.9f, 1f};
 
     public Image hurtPanel;
 
@@ -38,11 +38,13 @@ public class PitchController : MonoBehaviour
         {
             AudioManager.instance.Play("Miss");
 
+
             if (currentIndex <= cutOffValues.Length-1)
             {
                 currentIndex++;
                 currentIndex = (int)Mathf.Clamp(currentIndex, 0f, cutOffValues.Length - 1);
             }
+
                 
             alpf.cutoffFrequency = cutOffValues[currentIndex];
 
@@ -50,7 +52,12 @@ public class PitchController : MonoBehaviour
             Color tempColor = hurtPanel.color;
             tempColor.a = alphaValues[currentIndex];
             hurtPanel.color = tempColor;
-            
+            if (collision.gameObject.GetComponent<Note>().index == FindObjectOfType<SpawnerBehaviour>().arrayNote.Length - 1)
+            {
+                FindObjectOfType<SessionManager>().Endgame(true);
+                return;
+            }
+
             //instantiate effect
             GameObject obj = ObjectPooler.SharedInstance.GetPooledObject(1);
             obj.transform.position = collision.gameObject.transform.position;
@@ -61,7 +68,7 @@ public class PitchController : MonoBehaviour
             collision.gameObject.SetActive(false);
             if (currentIndex >= cutOffValues.Length-1)
             {
-                //FindObjectOfType<SessionManager>().Endgame(false);
+                FindObjectOfType<SessionManager>().Endgame(false);
             }
         }
     }

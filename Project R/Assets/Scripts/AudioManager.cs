@@ -27,7 +27,7 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
 
         //Charger tous les sons qui peuvent être
         //joués au cours d'une partie

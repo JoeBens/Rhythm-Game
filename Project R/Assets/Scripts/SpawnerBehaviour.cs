@@ -53,6 +53,8 @@ public class SpawnerBehaviour : MonoBehaviour
     
     public bool panelActivated = true;
 
+
+    public bool isDBZ = false;
     private void Awake()
     {
        
@@ -136,7 +138,20 @@ public class SpawnerBehaviour : MonoBehaviour
 
             //Enemy musicNote = ((GameObject)Instantiate(note, transform.position, Quaternion.identity)).GetComponent<Enemy>();
 
-            Note musicNote = ObjectPooler.SharedInstance.GetPooledObject(0).GetComponent<Note>();
+            Note musicNote;
+
+            if (isDBZ == true)
+            {
+                int rand = UnityEngine.Random.Range(2, 9);
+
+                musicNote = ObjectPooler.SharedInstance.GetPooledObject(rand).GetComponent<Note>();
+            }
+            else
+            {
+                musicNote = ObjectPooler.SharedInstance.GetPooledObject(0).GetComponent<Note>();
+            }
+
+
             musicNote.gameObject.SetActive(true);
             if (eventsBeatsArr[currentIndex] == 1)
             {

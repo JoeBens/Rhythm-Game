@@ -715,13 +715,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: -0.11374945, y: 0, z: 0, w: 0.99350953}
-  m_LocalPosition: {x: 0, y: -2.49, z: -9.4}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -13.063001, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &524765599
 GameObject:
   m_ObjectHideFlags: 0
@@ -3067,13 +3067,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1448548456}
-  m_LocalRotation: {x: -0.067399144, y: -0.0020651391, z: 0.0018608618, w: 0.9977222}
-  m_LocalPosition: {x: -0.32, y: -0.44, z: 0.000000030083}
-  m_LocalScale: {x: 1.8540155, y: 1.8540155, z: 1.8540155}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.4700993, y: 1.4700993, z: 1.4700993}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: -7.7290006, y: -0.25300002, z: 0.231}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1519940517
 GameObject:
   m_ObjectHideFlags: 0
@@ -3483,29 +3483,29 @@ MonoBehaviour:
     loop: 0
     playOnAwake: 0
   - name: EffectOne
-    clip: {fileID: 8300000, guid: 903a0ea33ee8c6a41ae6f540265e1fc4, type: 3}
-    volume: 0.2
+    clip: {fileID: 8300000, guid: 38e814a1c4d351040922c068eb7fbbab, type: 3}
+    volume: 0.01
     pitch: 1
     source: {fileID: 0}
     loop: 0
     playOnAwake: 0
   - name: EffectTwo
     clip: {fileID: 8300000, guid: ec70bb979f1e16d429fae7aa5ed2cff5, type: 3}
-    volume: 0.2
+    volume: 0.01
     pitch: 1
     source: {fileID: 0}
     loop: 0
     playOnAwake: 0
   - name: EffectThree
-    clip: {fileID: 8300000, guid: 903a0ea33ee8c6a41ae6f540265e1fc4, type: 3}
-    volume: 0.2
+    clip: {fileID: 8300000, guid: 38e814a1c4d351040922c068eb7fbbab, type: 3}
+    volume: 0.01
     pitch: 1
     source: {fileID: 0}
     loop: 0
     playOnAwake: 0
   - name: loop
     clip: {fileID: 8300000, guid: 8ca3e9b190bdafc468ac2133d59336e4, type: 3}
-    volume: 0.15
+    volume: 0
     pitch: 1
     source: {fileID: 0}
     loop: 1
@@ -4707,7 +4707,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7acbc3dd43c9d6c418e1d0c22a722231, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 46845b4934cd86445b8f0f1adfb0c2a5, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4715,7 +4715,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -4842,7 +4842,7 @@ PrefabInstance:
     - target: {fileID: 7170081941240390342, guid: 289d6df2fcdfd1b4db855c0db716e950,
         type: 3}
       propertyPath: m_Name
-      value: SpawnerJojo Original
+      value: 'SpawnerJojo '
       objectReference: {fileID: 0}
     - target: {fileID: 7170081941240390362, guid: 289d6df2fcdfd1b4db855c0db716e950,
         type: 3}
@@ -4914,5 +4914,10 @@ PrefabInstance:
       propertyPath: tapPanel
       value: 
       objectReference: {fileID: 1164882606}
+    - target: {fileID: 7170081941240390363, guid: 289d6df2fcdfd1b4db855c0db716e950,
+        type: 3}
+      propertyPath: songOffset
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 289d6df2fcdfd1b4db855c0db716e950, type: 3}
