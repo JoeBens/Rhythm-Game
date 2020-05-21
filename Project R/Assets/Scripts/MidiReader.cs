@@ -11,7 +11,7 @@ using System.IO;
 public class MidiReader : MonoBehaviour
 {
 
-    public float bpm = 130;
+    public float bpm;
     public float secPerBeat;
 
 
@@ -49,11 +49,12 @@ public class MidiReader : MonoBehaviour
         List<string> notes = new List<string>();
         for (int i = 0; i < arrayNote.Length; i++)
         {
+            arrayNote[i] = arrayNote[i] / 1.4m;
             notes.Add(arrayNote[i].ToString());
         }
 
         string[] arrayNoteV2 = notes.ToArray();
-        System.IO.File.WriteAllLines("Assets/Resources/GurengeNotes.txt", arrayNoteV2);
+        System.IO.File.WriteAllLines("Assets/Resources/AgainNotes.txt", arrayNoteV2);
     }
 
     public void WriteBeats()
@@ -63,7 +64,7 @@ public class MidiReader : MonoBehaviour
         {
             notes.Add(eventsBeatsArr[i].ToString());
         }
-        System.IO.File.WriteAllLines("Assets/Resources/GurengeBeats.txt", notes);
+        System.IO.File.WriteAllLines("Assets/Resources/AgainBeats.txt", notes);
     }
 
     //public decimal[] Read()
@@ -126,7 +127,7 @@ public class MidiReader : MonoBehaviour
     private List<decimal> CalculateMidiRealTime()
     {
         var strictMode = false;
-        var mf = new MidiFile("Assets/Audios/Midi Files/Gurenge.mid", strictMode);
+        var mf = new MidiFile("Assets/Audios/Midi Files/AgainYui.mid", strictMode);
         mf.Events.MidiFileType = 0;
 
         // Have just one collection for both non-note-off and tempo change events
@@ -207,7 +208,7 @@ public class MidiReader : MonoBehaviour
             // Add the time to the collection.
             eventsTimesArr.Add(lastRealTime / 1000000m);
 
-            //Debug.Log("Time: " + lastRealTime / 1000000m);
+            Debug.Log("Time: " + lastRealTime / 1000000m);
         }
         eventsBeatsArr = beatsList.ToArray();
         //Debug.Log("Length: " + eventsBeatsArr.Length);

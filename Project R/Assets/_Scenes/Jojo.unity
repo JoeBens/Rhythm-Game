@@ -2974,7 +2974,7 @@ MonoBehaviour:
       type: 3}
     amountToPool: 1670
     shouldExpand: 0
-  - objectToPool: {fileID: 6156780480688207899, guid: 339b8bef7d7a6d647adbc746e6f41a54,
+  - objectToPool: {fileID: 7105367141734337392, guid: 9a81ad8489d758548a97c7463801faf1,
       type: 3}
     amountToPool: 1670
     shouldExpand: 0
@@ -4917,7 +4917,7 @@ PrefabInstance:
     - target: {fileID: 7170081941240390363, guid: 289d6df2fcdfd1b4db855c0db716e950,
         type: 3}
       propertyPath: songOffset
-      value: 2
+      value: 2.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 289d6df2fcdfd1b4db855c0db716e950, type: 3}

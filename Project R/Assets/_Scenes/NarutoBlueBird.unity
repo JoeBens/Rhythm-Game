@@ -611,7 +611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: de07bf378e7247444a0715ad2ff509e3, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: de07bf378e7247444a0715ad2ff509e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1333,7 +1333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4005808538926482, guid: daa6cceb1b087d74aad6916dac2805ea, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 4005808538926482, guid: daa6cceb1b087d74aad6916dac2805ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1659,7 +1659,7 @@ Transform:
   m_LocalScale: {x: 0.4338463, y: 0.4338463, z: 0.4338463}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &768948845
 MonoBehaviour:
@@ -2168,7 +2168,7 @@ Transform:
   - {fileID: 524765601}
   - {fileID: 353352008}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &913907817
 GameObject:
@@ -2249,7 +2249,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1108191336
 PrefabInstance:
@@ -2261,7 +2261,7 @@ PrefabInstance:
     - target: {fileID: 7170081941240390342, guid: 289d6df2fcdfd1b4db855c0db716e950,
         type: 3}
       propertyPath: m_Name
-      value: Spawner Evangelion Delay
+      value: Spawner Naruto
       objectReference: {fileID: 0}
     - target: {fileID: 7170081941240390342, guid: 289d6df2fcdfd1b4db855c0db716e950,
         type: 3}
@@ -2306,7 +2306,7 @@ PrefabInstance:
     - target: {fileID: 7170081941240390362, guid: 289d6df2fcdfd1b4db855c0db716e950,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7170081941240390362, guid: 289d6df2fcdfd1b4db855c0db716e950,
         type: 3}
@@ -2341,12 +2341,17 @@ PrefabInstance:
     - target: {fileID: 7170081941240390363, guid: 289d6df2fcdfd1b4db855c0db716e950,
         type: 3}
       propertyPath: songOffset
-      value: 2
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 7170081941240390363, guid: 289d6df2fcdfd1b4db855c0db716e950,
         type: 3}
       propertyPath: removeLineY
       value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170081941240390363, guid: 289d6df2fcdfd1b4db855c0db716e950,
+        type: 3}
+      propertyPath: bpm
+      value: 131
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 289d6df2fcdfd1b4db855c0db716e950, type: 3}
@@ -2522,7 +2527,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1164882607
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2706,7 +2711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 37bd362d795dc334d8676f4781d66578, type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 37bd362d795dc334d8676f4781d66578, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3123,13 +3128,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemsToPool:
-  - objectToPool: {fileID: 890908096344199235, guid: 4bf2289d4e878e24396d404ae457adaa,
+  - objectToPool: {fileID: 9156670772234538274, guid: 6e3f9ebc86e054a46bf40cc01101dd99,
       type: 3}
-    amountToPool: 1580
+    amountToPool: 590
     shouldExpand: 0
-  - objectToPool: {fileID: 6728082065055898437, guid: f5a5f084273a93248a3d48a41674fb82,
+  - objectToPool: {fileID: 8713466259694467390, guid: ab54dcbe8fb93bb48a8100d0574de36f,
       type: 3}
-    amountToPool: 1580
+    amountToPool: 590
     shouldExpand: 0
   pooledObjects: []
 --- !u!4 &1436817711
@@ -3201,9 +3206,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -195
-  m_Sprite: {fileID: 21300000, guid: 96a5f557ff865934bbd1bcdbc1a5da68, type: 3}
-  m_Color: {r: 0.8207547, g: 0.8168832, b: 0.8168832, a: 1}
+  m_SortingOrder: -434
+  m_Sprite: {fileID: 21300000, guid: 89bae11a011c31c4887f4c8c4bdc0b1f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3221,11 +3226,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439454838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.17, y: -0.34, z: 0}
-  m_LocalScale: {x: 0.44638124, y: 0.44638124, z: 0.44638124}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.65546, y: 0.65546, z: 0.65546}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1448548456
 GameObject:
@@ -3306,7 +3311,7 @@ Transform:
   m_LocalScale: {x: 0.61507446, y: 0.61507446, z: 0.61507446}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1519940517
 GameObject:
@@ -3799,7 +3804,7 @@ Transform:
   - {fileID: 2101221214}
   - {fileID: 561091371}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1759379754
 GameObject:
@@ -3880,7 +3885,7 @@ Transform:
   m_LocalScale: {x: 0.5461726, y: 0.5461726, z: 0.5461726}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1761926243
 GameObject:
@@ -4483,11 +4488,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19e1e98e413f353479ce85163b934867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpm: 128
+  bpm: 131
   secPerBeat: 0
   eventsBeatsArr: 
-  textFileNotes: {fileID: 4900000, guid: 3c700a7f01818ae4882161d2d4d1a28f, type: 3}
-  textFileBeats: {fileID: 4900000, guid: c0a81f494d520bc4c901b9778bfff31c, type: 3}
+  textFileNotes: {fileID: 4900000, guid: 87ed7018c0e370b4bb8e92798aa37b02, type: 3}
+  textFileBeats: {fileID: 4900000, guid: 721ecea65225cd54e957dcdf938cd31d, type: 3}
 --- !u!4 &1918556526
 Transform:
   m_ObjectHideFlags: 0
@@ -4853,7 +4858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5034,7 +5039,7 @@ GameObject:
   - component: {fileID: 2140387350}
   - component: {fileID: 2140387352}
   m_Layer: 0
-  m_Name: Evangelion
+  m_Name: Naruto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5050,7 +5055,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6a4958ed44bbb6f43a12440a05c9fe0f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4ed99277b2267a045a8b3466cb97ecd9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -5148,7 +5153,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!169 &2140387352
 AudioLowPassFilter:
@@ -5175,102 +5180,3 @@ AudioLowPassFilter:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1001 &7170081939747037291
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7170081941240390342, guid: 289d6df2fcdfd1b4db855c0db716e950,
-        type: 3}
-      propertyPath: m_Name
-      value: Spawner Evangelion
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170081941240390342, guid: 289d6df2fcdfd1b4db855c0db716e950,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170081941240390362, guid: 289d6df2fcdfd1b4db855c0db716e950,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170081941240390362, guid: 289d6df2fcdfd1b4db855c0db716e950,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 8.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170081941240390362, guid: 289d6df2fcdfd1b4db855c0db716e950,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170081941240390362, guid: 289d6df2fcdfd1b4db855c0db716e950,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170081941240390362, guid: 289d6df2fcdfd1b4db855c0db716e950,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170081941240390362, guid: 289d6df2fcdfd1b4db855c0db716e950,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170081941240390362, guid: 289d6df2fcdfd1b4db855c0db716e950,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170081941240390362, guid: 289d6df2fcdfd1b4db855c0db716e950,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170081941240390362, guid: 289d6df2fcdfd1b4db855c0db716e950,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170081941240390362, guid: 289d6df2fcdfd1b4db855c0db716e950,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170081941240390362, guid: 289d6df2fcdfd1b4db855c0db716e950,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170081941240390363, guid: 289d6df2fcdfd1b4db855c0db716e950,
-        type: 3}
-      propertyPath: songAudioSource
-      value: 
-      objectReference: {fileID: 2140387350}
-    - target: {fileID: 7170081941240390363, guid: 289d6df2fcdfd1b4db855c0db716e950,
-        type: 3}
-      propertyPath: progressSlider
-      value: 
-      objectReference: {fileID: 1631697712}
-    - target: {fileID: 7170081941240390363, guid: 289d6df2fcdfd1b4db855c0db716e950,
-        type: 3}
-      propertyPath: tapPanel
-      value: 
-      objectReference: {fileID: 1164882606}
-    - target: {fileID: 7170081941240390363, guid: 289d6df2fcdfd1b4db855c0db716e950,
-        type: 3}
-      propertyPath: songOffset
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170081941240390363, guid: 289d6df2fcdfd1b4db855c0db716e950,
-        type: 3}
-      propertyPath: removeLineY
-      value: -5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 289d6df2fcdfd1b4db855c0db716e950, type: 3}
