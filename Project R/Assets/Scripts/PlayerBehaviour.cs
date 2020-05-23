@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerBehaviour : MonoBehaviour
 {
     private Rigidbody2D rb;
@@ -23,6 +23,8 @@ public class PlayerBehaviour : MonoBehaviour
     private PitchController pc;
 
     public GameObject winMenu;
+
+    public int nextSceneLoad;
 
     // Start is called before the first frame update
     void Start()
@@ -71,7 +73,25 @@ public class PlayerBehaviour : MonoBehaviour
             //if the song ended
             if (collision.gameObject.GetComponent<Note>().index == sb.arrayNote.Length-1)
             {
+                if (SceneManager.GetActiveScene().buildIndex == 10) /* < Change this int value to whatever your                                               last level build index is on your
+                                                                   build settings */
+                {
+                    Debug.Log("You Completed ALL Levels");
+
+                    //Show Win Screen or Somethin.
+                }
+                else
+                {
+                    //Move to next level
+
+                    //Setting Int for Index
+                    if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
+                    {
+                        PlayerPrefs.SetInt("levelAt", nextSceneLoad);
+                    }
+                }
                 FindObjectOfType<SessionManager>().Endgame(true);
+
             }
             collision.gameObject.SetActive(false);
             sm.UpdateScore(1);

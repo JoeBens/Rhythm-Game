@@ -68,7 +68,7 @@ public class PitchController : MonoBehaviour
             collision.gameObject.SetActive(false);
             if (currentIndex >= cutOffValues.Length-1)
             {
-                //FindObjectOfType<SessionManager>().Endgame(false);
+                FindObjectOfType<SessionManager>().Endgame(false);
             }
         }
     }

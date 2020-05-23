@@ -13,9 +13,9 @@ public class Destruction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dirX = Random.Range(-10, 10);
+        dirX = Random.Range(-5, 5);
         dirY = Random.Range(5, 8);
-        torque = Random.Range(500, 1500);
+        torque = Random.Range(5, 15);
         rb = this.GetComponent<Rigidbody2D>();
         rb.AddForce(new Vector2(dirX, dirY),ForceMode2D.Impulse);
         rb.AddTorque(torque, ForceMode2D.Force);

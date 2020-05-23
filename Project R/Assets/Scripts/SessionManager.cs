@@ -19,6 +19,7 @@ public class SessionManager : MonoBehaviour
 
     public GameObject holdPanel;
 
+    public GameObject ps;
 
     void Start()
     {
@@ -34,12 +35,43 @@ public class SessionManager : MonoBehaviour
 
     public void Endgame(bool win)
     {
-        completionMenu.SetActive(true);
+        
         AudioManager.instance.StopEverything();
         int score = sm.GetScore();
         int length = sb.arrayNote.Length;
         sb.enabled = false;
         FindObjectOfType<PlayerBehaviour>().GetComponent<PlayerBehaviour>().enabled = false;
+        if (win == true)
+        {
+            ps.SetActive(true);
+            StartCoroutine(EndRoutine(win, score, length, 1.5f));
+        }
+        else
+        {
+            GameObject[] notes = GameObject.FindGameObjectsWithTag("note");
+           
+            if(notes != null)
+            {
+                foreach (GameObject go in notes)
+                {
+                    go.GetComponent<Note>().enabled = false;
+                    go.AddComponent<Destruction>();
+                    float x = Random.Range(1.0f, 2.0f);
+                    go.GetComponent<Rigidbody2D>().gravityScale = x;
+                }
+                StartCoroutine(EndRoutine(win, score, length, 0.7f));
+            }
+            
+        }
+
+        
+    }
+
+    IEnumerator EndRoutine(bool win, int score, int length, float time)
+    {
+        yield return new WaitForSeconds(time);
+        completionMenu.SetActive(true);
+
         scoreText.SetText(score + " / " + length);
 
         holdPanel.SetActive(false);
@@ -51,7 +83,7 @@ public class SessionManager : MonoBehaviour
             notice.SetText("Very Bad!");
             tip.SetText("Focus next time!");
 
-            return;
+            yield break;
         }
         if (score <= length * 0.5f)
         {
@@ -68,7 +100,7 @@ public class SessionManager : MonoBehaviour
             notice.SetText("Almost perfect! Great job!");
             tip.SetText("You're very talented!");
         }
-        else if (score == length )
+        else if (score == length)
         {
             notice.SetText("Perfect.");
             tip.SetText("You inspire perfection.");
