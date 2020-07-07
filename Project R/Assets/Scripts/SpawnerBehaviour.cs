@@ -133,10 +133,6 @@ public class SpawnerBehaviour : MonoBehaviour
 
         if (currentIndex < arrayNote.Length && arrayNote[currentIndex] < (decimal)beatToShow)
         {
-            // Instantiate a new music note. (Search "Object Pooling" for more information if you wish to minimize the delay when instantiating game objects.)
-            // We don't care about the position and rotation because we will set them later in MusicNote.Initialize(...).
-
-            //Enemy musicNote = ((GameObject)Instantiate(note, transform.position, Quaternion.identity)).GetComponent<Enemy>();
 
             Note musicNote;
 
@@ -175,7 +171,6 @@ public class SpawnerBehaviour : MonoBehaviour
             notesOnScreen.Enqueue(musicNote);
 
 
-            // Update the next index.
             currentIndex++;
             progressSlider.value = currentIndex;
 

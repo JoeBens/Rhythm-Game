@@ -73,18 +73,12 @@ public class PlayerBehaviour : MonoBehaviour
             //if the song ended
             if (collision.gameObject.GetComponent<Note>().index == sb.arrayNote.Length-1)
             {
-                if (SceneManager.GetActiveScene().buildIndex == 10) /* < Change this int value to whatever your                                               last level build index is on your
-                                                                   build settings */
+                if (SceneManager.GetActiveScene().buildIndex == 10)
                 {
                     Debug.Log("You Completed ALL Levels");
-
-                    //Show Win Screen or Somethin.
                 }
                 else
                 {
-                    //Move to next level
-
-                    //Setting Int for Index
                     if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
                     {
                         PlayerPrefs.SetInt("levelAt", nextSceneLoad);

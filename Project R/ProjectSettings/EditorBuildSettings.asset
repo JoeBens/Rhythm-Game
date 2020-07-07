@@ -5,37 +5,37 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/_Main.unity
     guid: 6b342268d0dc57a4bba14e63bf7dba77
   - enabled: 1
     path: Assets/_Scenes/1-Dragon Ball.unity
     guid: a8b4492e1e25ba24a85c48f276fdd784
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/2-Shingeki.unity
     guid: 2c546b3a84e3fd841a573593564995de
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/3-Tokyo Ghoul.unity
     guid: 7902eac832cd30b429359048ed88d679
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/4-Guilty Crown.unity
     guid: 0dcd784b0e388ad478de00029382b429
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/5-Fairy Tail.unity
     guid: 3c199486d56ec064bbf5c4ba12b7d1fb
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/6-DemonSlayer.unity
     guid: 81e669c33033b5a469eaad45206bf2a9
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/7-Evangelion.unity
     guid: bc7537d66a1e99e4880885772d402804
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/8-FMA.unity
     guid: 4f6c5abc3cc620e47957610f6ff5854a
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/9-Jojo.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/10-Dragon Ball GT.unity
     guid: f3416333b09c2d048a1d4ae51f7321d0
   m_configObjects: {}
